@@ -18,6 +18,8 @@ async def users():
     await db.connect()
     users_response = await db.userdetails.find_many()
     return users_response
+
+
 @app.get("/users/{id}")
 async def user(id: int):
     db = Prisma()
@@ -25,15 +27,18 @@ async def user(id: int):
     user_response = await db.userdetails.find_unique(where={"id": id})
     return user_response
 
+
 @app.post("/users")
-async def create_user(user):
+async def create_user(u):
     # TODO
     return {"message": "To be implemented"}
+
 
 @app.put("/users/{id}")
 async def edit_user(id: int, user) -> Any:
     # TODO
     return {"message": "To be implemented"}
+
 
 @app.delete("/users/{id}")
 async def delete_user(id: int):
