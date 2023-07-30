@@ -1,3 +1,9 @@
+# Python Virtual Environemtn
 .venv
+
+# Text Editors
 .idea
 .vscode
+
+# Docker Compose Volumes
+data
