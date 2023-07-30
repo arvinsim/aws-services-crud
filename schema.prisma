@@ -9,7 +9,7 @@ generator client {
 }
 
 model UserDetails {
-  id         String @id @default(uuid())
+  id         Int @id @default(autoincrement())
   first_name String
   last_name  String
   age        Int
