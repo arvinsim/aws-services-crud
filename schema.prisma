@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://user:admin@localhost:5432/postgres"
+}
+
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = -1
+}
+
+model UserDetails {
+  id         String @id @default(uuid())
+  first_name String
+  last_name  String
+  age        Int
+  email      String
+
+  @@map("user_details")
+}
